@@ -7,7 +7,7 @@
 #define FPGABOARD_DEVICE_ID 0x1234
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("OFE");
+MODULE_AUTHOR("Matthew Wellings");
 MODULE_DESCRIPTION("FPGA Board LEDs");
 
 static struct pci_device_id fpgaboard_ids[] = {
@@ -16,28 +16,36 @@ static struct pci_device_id fpgaboard_ids[] = {
 };
 MODULE_DEVICE_TABLE(pci, fpgaboard_ids);
 
+struct user_led {
+        int led_num;
+        struct led_classdev led_dev;
+        void __iomem *device_reg;
+        int bit;
+};
+
 struct fpgaboard {
-        struct led_classdev userLED0;
+        struct user_led user_leds[4];
         void __iomem *ptr_bar0;
 };
 
 static int fpgaboard_led_brightness_set(struct led_classdev *cdev, enum led_brightness brightness) {
         u8 reg_value, mask, new_value;
-        struct fpgaboard *board = container_of(cdev, struct fpgaboard, userLED0);
+        struct user_led *led = container_of(cdev, struct user_led, led_dev);
         
-        printk(KERN_INFO "FPGA Board LEDs: LED brightness set to:%d\n", (int)brightness);
+        printk(KERN_INFO "FPGA Board LEDs: LED %d brightness set to: %d\n", led->led_num, (int)brightness);
 
-        mask = ~((u8) 1);
-        new_value = (u8) 1 & (u8) brightness;
-        reg_value = ioread8(board->ptr_bar0);
-        iowrite8((reg_value & mask) | new_value, board->ptr_bar0);
+        mask = ~((u8) 1 << led->bit);
+        new_value = ((u8) 1 & (u8) brightness) << led->bit;
+        reg_value = ioread8(led->device_reg);
+        iowrite8((reg_value & mask) | new_value, led->device_reg);
         return 0;
 }
 
 static int fpgaboard_probe(struct pci_dev *dev, const struct pci_device_id *id) {
-        int status;
+        int status, i;
         void __iomem *const* bar_map;
         struct fpgaboard *board;
+        char *led_name;
 
         printk(KERN_INFO "FPGA Board LEDs: Device registered\n");
         
@@ -67,16 +75,24 @@ static int fpgaboard_probe(struct pci_dev *dev, const struct pci_device_id *id) 
         }
 
         board = devm_kzalloc(&dev->dev, sizeof(struct fpgaboard), GFP_KERNEL);
+//        dev-> = board;
         board->ptr_bar0 = bar_map[0];
 
-        board->userLED0.name = "fpga_board::user0";
-        board->userLED0.max_brightness = 1;
-        board->userLED0.brightness_set_blocking = fpgaboard_led_brightness_set;
-
-        status = devm_led_classdev_register(&dev->dev, &board->userLED0);
-        if (status < 0) {
-                printk(KERN_ERR "FPGA Board LEDs: CAnnot register LED class\n");
-                return status;
+        for (i = 0; i < 4; i++) {
+                board->user_leds[i].bit=i;
+                board->user_leds[i].led_num=i;
+                board->user_leds[i].device_reg=board->ptr_bar0;
+                led_name = devm_kzalloc(&dev->dev, 19, GFP_KERNEL);
+                snprintf(led_name, 19, "fpga_board::user%d", i);
+                board->user_leds[i].led_dev.name = led_name;
+                board->user_leds[i].led_dev.max_brightness = 1;
+                board->user_leds[i].led_dev.brightness_set_blocking = fpgaboard_led_brightness_set;
+                
+                status = devm_led_classdev_register(&dev->dev, &board->user_leds[i].led_dev);
+                if (status < 0) {
+                        printk(KERN_ERR "FPGA Board LEDs: Cannot register LED %d class\n", i);
+                        return status;
+                }
         }
 
         return 0;
