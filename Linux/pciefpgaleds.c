@@ -26,18 +26,23 @@ struct user_led {
 struct fpgaboard {
         struct user_led user_leds[4];
         void __iomem *ptr_bar0;
+        struct mutex lock;
 };
 
 static int fpgaboard_led_brightness_set(struct led_classdev *cdev, enum led_brightness brightness) {
         u8 reg_value, mask, new_value;
         struct user_led *led = container_of(cdev, struct user_led, led_dev);
-        
+        struct fpgaboard *board = container_of(led, struct fpgaboard, user_leds[led->led_num]);        
+
         printk(KERN_INFO "FPGA Board LEDs: LED %d brightness set to: %d\n", led->led_num, (int)brightness);
 
         mask = ~((u8) 1 << led->bit);
         new_value = ((u8) 1 & (u8) brightness) << led->bit;
+        mutex_lock(&board->lock);
         reg_value = ioread8(led->device_reg);
         iowrite8((reg_value & mask) | new_value, led->device_reg);
+        mutex_unlock(&board->lock);
+
         return 0;
 }
 
@@ -76,6 +81,7 @@ static int fpgaboard_probe(struct pci_dev *dev, const struct pci_device_id *id) 
 
         board = devm_kzalloc(&dev->dev, sizeof(struct fpgaboard), GFP_KERNEL);
         board->ptr_bar0 = bar_map[0];
+        printk(KERN_INFO "FPGA Board LEDs: fpgaboard: %p\n", board);
 
         for (i = 0; i < 4; i++) {
                 board->user_leds[i].bit=i;
