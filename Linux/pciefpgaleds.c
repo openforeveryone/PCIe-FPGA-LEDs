@@ -1,6 +1,7 @@
 #include <linux/module.h>
 #include <linux/init.h>
 #include <linux/pci.h>
+#include <linux/leds.h>
 
 #define FPGABOARD_VENDOR_ID 0x1172
 #define FPGABOARD_DEVICE_ID 0x1234
@@ -15,10 +16,28 @@ static struct pci_device_id fpgaboard_ids[] = {
 };
 MODULE_DEVICE_TABLE(pci, fpgaboard_ids);
 
+struct fpgaboard {
+        struct led_classdev userLED0;
+        void __iomem *ptr_bar0;
+};
+
+static int fpgaboard_led_brightness_set(struct led_classdev *cdev, enum led_brightness brightness) {
+        u8 reg_value, mask, new_value;
+        struct fpgaboard *board = container_of(cdev, struct fpgaboard, userLED0);
+        
+        printk(KERN_INFO "FPGA Board LEDs: LED brightness set to:%d\n", (int)brightness);
+
+        mask = ~((u8) 1);
+        new_value = (u8) 1 & (u8) brightness;
+        reg_value = ioread8(board->ptr_bar0);
+        iowrite8((reg_value & mask) | new_value, board->ptr_bar0);
+        return 0;
+}
+
 static int fpgaboard_probe(struct pci_dev *dev, const struct pci_device_id *id) {
         int status;
         void __iomem *const* bar_map;
-        void __iomem *ptr_bar0;
+        struct fpgaboard *board;
 
         printk(KERN_INFO "FPGA Board LEDs: Device registered\n");
         
@@ -46,10 +65,19 @@ static int fpgaboard_probe(struct pci_dev *dev, const struct pci_device_id *id) 
                 printk(KERN_ERR "FPGA Board LEDs: Invald BAR0\n");
                 return -1;
         }
-        ptr_bar0 = bar_map[0];
 
-        iowrite8(2, ptr_bar0);
-        printk(KERN_INFO "FPGA Board LEDs: read back %d\n", ioread8(ptr_bar0));
+        board = devm_kzalloc(&dev->dev, sizeof(struct fpgaboard), GFP_KERNEL);
+        board->ptr_bar0 = bar_map[0];
+
+        board->userLED0.name = "fpga_board::user0";
+        board->userLED0.max_brightness = 1;
+        board->userLED0.brightness_set_blocking = fpgaboard_led_brightness_set;
+
+        status = devm_led_classdev_register(&dev->dev, &board->userLED0);
+        if (status < 0) {
+                printk(KERN_ERR "FPGA Board LEDs: CAnnot register LED class\n");
+                return status;
+        }
 
         return 0;
 }
