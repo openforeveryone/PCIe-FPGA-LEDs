@@ -1,0 +1,72 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2024  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the Intel FPGA Software License Subscription Agreements 
+# on the Quartus Prime software download page.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 24.1.0 Build 115 03/21/2024 SC Pro Edition
+# Date created = 10:49:25  September 09, 2024
+#
+# -------------------------------------------------------------------------- #
+set_global_assignment -name TOP_LEVEL_ENTITY PCIe_example_main
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 24.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:49:25  SEPTEMBER 09, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "24.1.0 Pro Edition"
+set_global_assignment -name DEVICE 10CX220YF780E5G
+set_global_assignment -name FAMILY "Cyclone 10 GX"
+set_global_assignment -name IP_FILE ip/pcie_ed/pcie_ed_DUT.ip
+set_global_assignment -name IP_FILE ip/pcie_ed/pcie_ed_DK.ip
+set_global_assignment -name IP_FILE ip/pcie_ed/pcie_ed_MEM.ip
+set_global_assignment -name QSYS_FILE pcie_ed.qsys
+set_global_assignment -name MESSAGE_DISABLE 14284 -entity altpcie_dynamic_control
+set_global_assignment -name MESSAGE_DISABLE 14285 -entity altpcie_dynamic_control
+set_global_assignment -name MESSAGE_DISABLE 14320 -entity altpcie_dynamic_control
+set_global_assignment -name MESSAGE_DISABLE 13410
+set_global_assignment -name MESSAGE_DISABLE 12677
+set_global_assignment -name MESSAGE_DISABLE 15610
+set_instance_assignment -name IO_STANDARD "1.8 V" -to pcie_rstn_pin_perst
+set_instance_assignment -name VIRTUAL_PIN ON -to hip_ctrl_*
+set_instance_assignment -name VIRTUAL_PIN ON -to pipe_sim_only_*
+set_global_assignment -name SDC_FILE pcie_ed_a10_revd_devkit_sdc.sdc
+set_global_assignment -name OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name ENABLE_UNUSED_RX_CLOCK_WORKAROUND ON
+set_instance_assignment -name PARTITION_COLOUR 4294951313 -to pcie_ed -entity pcie_ed
+set_global_assignment -name VHDL_FILE PCIe_example_main.vhd
+set_location_assignment PIN_AB11 -to PCIE_PERSTn -comment IOBANK_2A
+set_location_assignment PIN_R24 -to CLOCK_100_p -comment IOBANK_1D
+set_location_assignment PIN_V26 -to rx_serial_0_p -comment IOBANK_1C
+set_location_assignment PIN_W28 -to tx_serial_0_p -comment IOBANK_1C
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_serial_0_p -entity PCIe_example_main
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to tx_serial_0_p -entity PCIe_example_main
+set_instance_assignment -name IO_STANDARD "1.8 V" -to PCIE_PERSTn -entity PCIe_example_main
+set_instance_assignment -name IO_STANDARD LVDS -to CLOCK_100_p -entity PCIe_example_main
+set_global_assignment -name IP_FILE SFL.ip
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "ACTIVE SERIAL X4"
+set_global_assignment -name ACTIVE_SERIAL_CLOCK FREQ_100MHZ
+set_global_assignment -name BOARD default
+set_global_assignment -name IP_FILE ip/pcie_ed/pcie_ed_pio_0.ip
+set_location_assignment PIN_AF6 -to leds[0] -comment IOBANK_3A
+set_location_assignment PIN_AE6 -to leds[1] -comment IOBANK_3A
+set_location_assignment PIN_AC6 -to leds[2] -comment IOBANK_3A
+set_location_assignment PIN_AC7 -to leds[3] -comment IOBANK_3A
+set_location_assignment PIN_AH2 -to buttons[2] -comment IOBANK_3A
+set_location_assignment PIN_AD4 -to buttons[1] -comment IOBANK_3A
+set_location_assignment PIN_AE4 -to buttons[0] -comment IOBANK_3A
+set_location_assignment PIN_AE2 -to dips[0] -comment IOBANK_3A
+set_location_assignment PIN_AD2 -to dips[1] -comment IOBANK_3A
+set_location_assignment PIN_AC1 -to dips[2] -comment IOBANK_3A
+set_location_assignment PIN_AC2 -to dips[3] -comment IOBANK_3A
