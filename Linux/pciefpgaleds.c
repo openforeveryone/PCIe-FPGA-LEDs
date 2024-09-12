@@ -75,7 +75,6 @@ static int fpgaboard_probe(struct pci_dev *dev, const struct pci_device_id *id) 
         }
 
         board = devm_kzalloc(&dev->dev, sizeof(struct fpgaboard), GFP_KERNEL);
-//        dev-> = board;
         board->ptr_bar0 = bar_map[0];
 
         for (i = 0; i < 4; i++) {
@@ -98,15 +97,10 @@ static int fpgaboard_probe(struct pci_dev *dev, const struct pci_device_id *id) 
         return 0;
 }
 
-static void fpgaboard_remove(struct pci_dev *dev) {
-        printk(KERN_INFO "FPGA Board LEDs: Device unregistered\n");
-}
-
 static struct pci_driver fpgaboardio_driver = {
         .name = "fpgaboardleds",
         .id_table = fpgaboard_ids,
         .probe = fpgaboard_probe,
-        .remove = fpgaboard_remove,
 };
 
 static int __init ModuleInit(void) {
