@@ -29,8 +29,6 @@ set_global_assignment -name LAST_QUARTUS_VERSION "24.1.0 Pro Edition"
 set_global_assignment -name DEVICE 10CX220YF780E5G
 set_global_assignment -name FAMILY "Cyclone 10 GX"
 set_global_assignment -name IP_FILE ip/pcie_ed/pcie_ed_DUT.ip
-set_global_assignment -name IP_FILE ip/pcie_ed/pcie_ed_DK.ip
-set_global_assignment -name IP_FILE ip/pcie_ed/pcie_ed_MEM.ip
 set_global_assignment -name QSYS_FILE pcie_ed.qsys
 set_global_assignment -name MESSAGE_DISABLE 14284 -entity altpcie_dynamic_control
 set_global_assignment -name MESSAGE_DISABLE 14285 -entity altpcie_dynamic_control

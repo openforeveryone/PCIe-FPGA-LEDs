@@ -235,51 +235,6 @@ https://fpgasoftware.intel.com/eula.-->
       </ipxact:parameters>
     </ipxact:busInterface>
     <ipxact:busInterface>
-      <ipxact:name>dk_hip</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="conduit" version="24.1"></ipxact:busType>
-      <ipxact:abstractionTypes>
-        <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="24.1"></ipxact:abstractionRef>
-          <ipxact:portMaps>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>devkit_status</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>devkit_status</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>devkit_ctrl</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>devkit_ctrl</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-          </ipxact:portMaps>
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-      <ipxact:slave></ipxact:slave>
-      <ipxact:parameters>
-        <ipxact:parameter parameterId="associatedClock" type="string">
-          <ipxact:name>associatedClock</ipxact:name>
-          <ipxact:displayName>associatedClock</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="associatedReset" type="string">
-          <ipxact:name>associatedReset</ipxact:name>
-          <ipxact:displayName>associatedReset</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="prSafe" type="bit">
-          <ipxact:name>prSafe</ipxact:name>
-          <ipxact:displayName>Partial Reconfiguration Safe</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-      </ipxact:parameters>
-    </ipxact:busInterface>
-    <ipxact:busInterface>
       <ipxact:name>hip_pipe</ipxact:name>
       <ipxact:busType vendor="intel" library="intel" name="conduit" version="24.1"></ipxact:busType>
       <ipxact:abstractionTypes>
@@ -586,794 +541,6 @@ https://fpgasoftware.intel.com/eula.-->
       </ipxact:parameters>
     </ipxact:busInterface>
     <ipxact:busInterface>
-      <ipxact:name>txs</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="avalon" version="24.1"></ipxact:busType>
-      <ipxact:abstractionTypes>
-        <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="avalon" version="24.1"></ipxact:abstractionRef>
-          <ipxact:portMaps>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>address</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>txs_address_i</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>chipselect</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>txs_chipselect_i</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>byteenable</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>txs_byteenable_i</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>readdata</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>txs_readdata_o</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>writedata</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>txs_writedata_i</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>read</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>txs_read_i</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>write</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>txs_write_i</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>burstcount</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>txs_burstcount_i</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>readdatavalid</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>txs_readdatavalid_o</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>waitrequest</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>txs_waitrequest_o</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-          </ipxact:portMaps>
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-      <ipxact:slave></ipxact:slave>
-      <ipxact:parameters>
-        <ipxact:parameter parameterId="addressAlignment" type="string">
-          <ipxact:name>addressAlignment</ipxact:name>
-          <ipxact:displayName>Agent addressing</ipxact:displayName>
-          <ipxact:value>DYNAMIC</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="addressGroup" type="int">
-          <ipxact:name>addressGroup</ipxact:name>
-          <ipxact:displayName>Address group</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="addressSpan" type="string">
-          <ipxact:name>addressSpan</ipxact:name>
-          <ipxact:displayName>Address span</ipxact:displayName>
-          <ipxact:value>8192</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="addressUnits" type="string">
-          <ipxact:name>addressUnits</ipxact:name>
-          <ipxact:displayName>Address units</ipxact:displayName>
-          <ipxact:value>SYMBOLS</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="alwaysBurstMaxBurst" type="bit">
-          <ipxact:name>alwaysBurstMaxBurst</ipxact:name>
-          <ipxact:displayName>Always burst maximum burst</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="associatedClock" type="string">
-          <ipxact:name>associatedClock</ipxact:name>
-          <ipxact:displayName>Associated clock</ipxact:displayName>
-          <ipxact:value>coreclkout_hip</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="associatedReset" type="string">
-          <ipxact:name>associatedReset</ipxact:name>
-          <ipxact:displayName>Associated reset</ipxact:displayName>
-          <ipxact:value>app_nreset_status</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="bitsPerSymbol" type="int">
-          <ipxact:name>bitsPerSymbol</ipxact:name>
-          <ipxact:displayName>Bits per symbol</ipxact:displayName>
-          <ipxact:value>8</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="bridgedAddressOffset" type="string">
-          <ipxact:name>bridgedAddressOffset</ipxact:name>
-          <ipxact:displayName>Bridged Address Offset</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="bridgesToMaster" type="string">
-          <ipxact:name>bridgesToMaster</ipxact:name>
-          <ipxact:displayName>Bridges to host</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="burstOnBurstBoundariesOnly" type="bit">
-          <ipxact:name>burstOnBurstBoundariesOnly</ipxact:name>
-          <ipxact:displayName>Burst on burst boundaries only</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="burstcountUnits" type="string">
-          <ipxact:name>burstcountUnits</ipxact:name>
-          <ipxact:displayName>Burstcount units</ipxact:displayName>
-          <ipxact:value>WORDS</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="constantBurstBehavior" type="bit">
-          <ipxact:name>constantBurstBehavior</ipxact:name>
-          <ipxact:displayName>Constant burst behavior</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="explicitAddressSpan" type="string">
-          <ipxact:name>explicitAddressSpan</ipxact:name>
-          <ipxact:displayName>Explicit address span</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="holdTime" type="int">
-          <ipxact:name>holdTime</ipxact:name>
-          <ipxact:displayName>Hold</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="interleaveBursts" type="bit">
-          <ipxact:name>interleaveBursts</ipxact:name>
-          <ipxact:displayName>Interleave bursts</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="isBigEndian" type="bit">
-          <ipxact:name>isBigEndian</ipxact:name>
-          <ipxact:displayName>Big endian</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="isFlash" type="bit">
-          <ipxact:name>isFlash</ipxact:name>
-          <ipxact:displayName>Flash memory</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="isMemoryDevice" type="bit">
-          <ipxact:name>isMemoryDevice</ipxact:name>
-          <ipxact:displayName>Memory device</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="isNonVolatileStorage" type="bit">
-          <ipxact:name>isNonVolatileStorage</ipxact:name>
-          <ipxact:displayName>Non-volatile storage</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="linewrapBursts" type="bit">
-          <ipxact:name>linewrapBursts</ipxact:name>
-          <ipxact:displayName>Linewrap bursts</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="maximumPendingReadTransactions" type="int">
-          <ipxact:name>maximumPendingReadTransactions</ipxact:name>
-          <ipxact:displayName>Maximum pending read transactions</ipxact:displayName>
-          <ipxact:value>16</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="maximumPendingWriteTransactions" type="int">
-          <ipxact:name>maximumPendingWriteTransactions</ipxact:name>
-          <ipxact:displayName>Maximum pending write transactions</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="minimumReadLatency" type="int">
-          <ipxact:name>minimumReadLatency</ipxact:name>
-          <ipxact:displayName>minimumReadLatency</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="minimumResponseLatency" type="int">
-          <ipxact:name>minimumResponseLatency</ipxact:name>
-          <ipxact:displayName>Minimum response latency</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="minimumUninterruptedRunLength" type="int">
-          <ipxact:name>minimumUninterruptedRunLength</ipxact:name>
-          <ipxact:displayName>Minimum uninterrupted run length</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="prSafe" type="bit">
-          <ipxact:name>prSafe</ipxact:name>
-          <ipxact:displayName>Partial Reconfiguration Safe</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="printableDevice" type="bit">
-          <ipxact:name>printableDevice</ipxact:name>
-          <ipxact:displayName>Can receive stdout/stderr</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="readLatency" type="int">
-          <ipxact:name>readLatency</ipxact:name>
-          <ipxact:displayName>Read latency</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="readWaitStates" type="int">
-          <ipxact:name>readWaitStates</ipxact:name>
-          <ipxact:displayName>Read wait states</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="readWaitTime" type="int">
-          <ipxact:name>readWaitTime</ipxact:name>
-          <ipxact:displayName>Read wait</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="registerIncomingSignals" type="bit">
-          <ipxact:name>registerIncomingSignals</ipxact:name>
-          <ipxact:displayName>Register incoming signals</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="registerOutgoingSignals" type="bit">
-          <ipxact:name>registerOutgoingSignals</ipxact:name>
-          <ipxact:displayName>Register outgoing signals</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="setupTime" type="int">
-          <ipxact:name>setupTime</ipxact:name>
-          <ipxact:displayName>Setup</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="timingUnits" type="string">
-          <ipxact:name>timingUnits</ipxact:name>
-          <ipxact:displayName>Timing units</ipxact:displayName>
-          <ipxact:value>Cycles</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="transparentBridge" type="bit">
-          <ipxact:name>transparentBridge</ipxact:name>
-          <ipxact:displayName>Transparent bridge</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="waitrequestAllowance" type="int">
-          <ipxact:name>waitrequestAllowance</ipxact:name>
-          <ipxact:displayName>Waitrequest allowance</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="wellBehavedWaitrequest" type="bit">
-          <ipxact:name>wellBehavedWaitrequest</ipxact:name>
-          <ipxact:displayName>Well-behaved waitrequest</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="writeLatency" type="int">
-          <ipxact:name>writeLatency</ipxact:name>
-          <ipxact:displayName>Write latency</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="writeWaitStates" type="int">
-          <ipxact:name>writeWaitStates</ipxact:name>
-          <ipxact:displayName>Write wait states</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="writeWaitTime" type="int">
-          <ipxact:name>writeWaitTime</ipxact:name>
-          <ipxact:displayName>Write wait</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhFeatureGuid" type="string">
-          <ipxact:name>dfhFeatureGuid</ipxact:name>
-          <ipxact:displayName>Feature GUID</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhGroupId" type="longint">
-          <ipxact:name>dfhGroupId</ipxact:name>
-          <ipxact:displayName>Group ID</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhParameterId" type="string">
-          <ipxact:name>dfhParameterId</ipxact:name>
-          <ipxact:displayName>ID</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhParameterName" type="string">
-          <ipxact:name>dfhParameterName</ipxact:name>
-          <ipxact:displayName>Name</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhParameterVersion" type="string">
-          <ipxact:name>dfhParameterVersion</ipxact:name>
-          <ipxact:displayName>Version</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhParameterData" type="string">
-          <ipxact:name>dfhParameterData</ipxact:name>
-          <ipxact:displayName>Data (HEX/DEC)</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhParameterDataLength" type="string">
-          <ipxact:name>dfhParameterDataLength</ipxact:name>
-          <ipxact:displayName>Data length</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhFeatureMajorVersion" type="longint">
-          <ipxact:name>dfhFeatureMajorVersion</ipxact:name>
-          <ipxact:displayName>Feature major version</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhFeatureMinorVersion" type="longint">
-          <ipxact:name>dfhFeatureMinorVersion</ipxact:name>
-          <ipxact:displayName>Feature minor version</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhFeatureId" type="longint">
-          <ipxact:name>dfhFeatureId</ipxact:name>
-          <ipxact:displayName>Feature ID</ipxact:displayName>
-          <ipxact:value>35</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhFeatureType" type="longint">
-          <ipxact:name>dfhFeatureType</ipxact:name>
-          <ipxact:displayName>Feature Type</ipxact:displayName>
-          <ipxact:value>3</ipxact:value>
-        </ipxact:parameter>
-      </ipxact:parameters>
-      <ipxact:vendorExtensions>
-        <altera:altera_assignments>
-          <ipxact:parameters>
-            <ipxact:parameter parameterId="embeddedsw.configuration.isFlash" type="string">
-              <ipxact:name>embeddedsw.configuration.isFlash</ipxact:name>
-              <ipxact:value>0</ipxact:value>
-            </ipxact:parameter>
-            <ipxact:parameter parameterId="embeddedsw.configuration.isMemoryDevice" type="string">
-              <ipxact:name>embeddedsw.configuration.isMemoryDevice</ipxact:name>
-              <ipxact:value>0</ipxact:value>
-            </ipxact:parameter>
-            <ipxact:parameter parameterId="embeddedsw.configuration.isNonVolatileStorage" type="string">
-              <ipxact:name>embeddedsw.configuration.isNonVolatileStorage</ipxact:name>
-              <ipxact:value>0</ipxact:value>
-            </ipxact:parameter>
-            <ipxact:parameter parameterId="embeddedsw.configuration.isPrintableDevice" type="string">
-              <ipxact:name>embeddedsw.configuration.isPrintableDevice</ipxact:name>
-              <ipxact:value>0</ipxact:value>
-            </ipxact:parameter>
-          </ipxact:parameters>
-        </altera:altera_assignments>
-      </ipxact:vendorExtensions>
-    </ipxact:busInterface>
-    <ipxact:busInterface>
-      <ipxact:name>cra</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="avalon" version="24.1"></ipxact:busType>
-      <ipxact:abstractionTypes>
-        <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="avalon" version="24.1"></ipxact:abstractionRef>
-          <ipxact:portMaps>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>chipselect</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>cra_chipselect_i</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>address</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>cra_address_i</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>byteenable</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>cra_byteenable_i</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>read</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>cra_read_i</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>readdata</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>cra_readdata_o</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>write</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>cra_write_i</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>writedata</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>cra_writedata_i</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>waitrequest</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>cra_waitrequest_o</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-          </ipxact:portMaps>
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-      <ipxact:slave></ipxact:slave>
-      <ipxact:parameters>
-        <ipxact:parameter parameterId="addressAlignment" type="string">
-          <ipxact:name>addressAlignment</ipxact:name>
-          <ipxact:displayName>Agent addressing</ipxact:displayName>
-          <ipxact:value>DYNAMIC</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="addressGroup" type="int">
-          <ipxact:name>addressGroup</ipxact:name>
-          <ipxact:displayName>Address group</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="addressSpan" type="string">
-          <ipxact:name>addressSpan</ipxact:name>
-          <ipxact:displayName>Address span</ipxact:displayName>
-          <ipxact:value>16384</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="addressUnits" type="string">
-          <ipxact:name>addressUnits</ipxact:name>
-          <ipxact:displayName>Address units</ipxact:displayName>
-          <ipxact:value>SYMBOLS</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="alwaysBurstMaxBurst" type="bit">
-          <ipxact:name>alwaysBurstMaxBurst</ipxact:name>
-          <ipxact:displayName>Always burst maximum burst</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="associatedClock" type="string">
-          <ipxact:name>associatedClock</ipxact:name>
-          <ipxact:displayName>Associated clock</ipxact:displayName>
-          <ipxact:value>coreclkout_hip</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="associatedReset" type="string">
-          <ipxact:name>associatedReset</ipxact:name>
-          <ipxact:displayName>Associated reset</ipxact:displayName>
-          <ipxact:value>app_nreset_status</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="bitsPerSymbol" type="int">
-          <ipxact:name>bitsPerSymbol</ipxact:name>
-          <ipxact:displayName>Bits per symbol</ipxact:displayName>
-          <ipxact:value>8</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="bridgedAddressOffset" type="string">
-          <ipxact:name>bridgedAddressOffset</ipxact:name>
-          <ipxact:displayName>Bridged Address Offset</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="bridgesToMaster" type="string">
-          <ipxact:name>bridgesToMaster</ipxact:name>
-          <ipxact:displayName>Bridges to host</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="burstOnBurstBoundariesOnly" type="bit">
-          <ipxact:name>burstOnBurstBoundariesOnly</ipxact:name>
-          <ipxact:displayName>Burst on burst boundaries only</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="burstcountUnits" type="string">
-          <ipxact:name>burstcountUnits</ipxact:name>
-          <ipxact:displayName>Burstcount units</ipxact:displayName>
-          <ipxact:value>WORDS</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="constantBurstBehavior" type="bit">
-          <ipxact:name>constantBurstBehavior</ipxact:name>
-          <ipxact:displayName>Constant burst behavior</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="explicitAddressSpan" type="string">
-          <ipxact:name>explicitAddressSpan</ipxact:name>
-          <ipxact:displayName>Explicit address span</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="holdTime" type="int">
-          <ipxact:name>holdTime</ipxact:name>
-          <ipxact:displayName>Hold</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="interleaveBursts" type="bit">
-          <ipxact:name>interleaveBursts</ipxact:name>
-          <ipxact:displayName>Interleave bursts</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="isBigEndian" type="bit">
-          <ipxact:name>isBigEndian</ipxact:name>
-          <ipxact:displayName>Big endian</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="isFlash" type="bit">
-          <ipxact:name>isFlash</ipxact:name>
-          <ipxact:displayName>Flash memory</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="isMemoryDevice" type="bit">
-          <ipxact:name>isMemoryDevice</ipxact:name>
-          <ipxact:displayName>Memory device</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="isNonVolatileStorage" type="bit">
-          <ipxact:name>isNonVolatileStorage</ipxact:name>
-          <ipxact:displayName>Non-volatile storage</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="linewrapBursts" type="bit">
-          <ipxact:name>linewrapBursts</ipxact:name>
-          <ipxact:displayName>Linewrap bursts</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="maximumPendingReadTransactions" type="int">
-          <ipxact:name>maximumPendingReadTransactions</ipxact:name>
-          <ipxact:displayName>Maximum pending read transactions</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="maximumPendingWriteTransactions" type="int">
-          <ipxact:name>maximumPendingWriteTransactions</ipxact:name>
-          <ipxact:displayName>Maximum pending write transactions</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="minimumReadLatency" type="int">
-          <ipxact:name>minimumReadLatency</ipxact:name>
-          <ipxact:displayName>minimumReadLatency</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="minimumResponseLatency" type="int">
-          <ipxact:name>minimumResponseLatency</ipxact:name>
-          <ipxact:displayName>Minimum response latency</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="minimumUninterruptedRunLength" type="int">
-          <ipxact:name>minimumUninterruptedRunLength</ipxact:name>
-          <ipxact:displayName>Minimum uninterrupted run length</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="prSafe" type="bit">
-          <ipxact:name>prSafe</ipxact:name>
-          <ipxact:displayName>Partial Reconfiguration Safe</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="printableDevice" type="bit">
-          <ipxact:name>printableDevice</ipxact:name>
-          <ipxact:displayName>Can receive stdout/stderr</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="readLatency" type="int">
-          <ipxact:name>readLatency</ipxact:name>
-          <ipxact:displayName>Read latency</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="readWaitStates" type="int">
-          <ipxact:name>readWaitStates</ipxact:name>
-          <ipxact:displayName>Read wait states</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="readWaitTime" type="int">
-          <ipxact:name>readWaitTime</ipxact:name>
-          <ipxact:displayName>Read wait</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="registerIncomingSignals" type="bit">
-          <ipxact:name>registerIncomingSignals</ipxact:name>
-          <ipxact:displayName>Register incoming signals</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="registerOutgoingSignals" type="bit">
-          <ipxact:name>registerOutgoingSignals</ipxact:name>
-          <ipxact:displayName>Register outgoing signals</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="setupTime" type="int">
-          <ipxact:name>setupTime</ipxact:name>
-          <ipxact:displayName>Setup</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="timingUnits" type="string">
-          <ipxact:name>timingUnits</ipxact:name>
-          <ipxact:displayName>Timing units</ipxact:displayName>
-          <ipxact:value>Cycles</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="transparentBridge" type="bit">
-          <ipxact:name>transparentBridge</ipxact:name>
-          <ipxact:displayName>Transparent bridge</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="waitrequestAllowance" type="int">
-          <ipxact:name>waitrequestAllowance</ipxact:name>
-          <ipxact:displayName>Waitrequest allowance</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="wellBehavedWaitrequest" type="bit">
-          <ipxact:name>wellBehavedWaitrequest</ipxact:name>
-          <ipxact:displayName>Well-behaved waitrequest</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="writeLatency" type="int">
-          <ipxact:name>writeLatency</ipxact:name>
-          <ipxact:displayName>Write latency</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="writeWaitStates" type="int">
-          <ipxact:name>writeWaitStates</ipxact:name>
-          <ipxact:displayName>Write wait states</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="writeWaitTime" type="int">
-          <ipxact:name>writeWaitTime</ipxact:name>
-          <ipxact:displayName>Write wait</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhFeatureGuid" type="string">
-          <ipxact:name>dfhFeatureGuid</ipxact:name>
-          <ipxact:displayName>Feature GUID</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhGroupId" type="longint">
-          <ipxact:name>dfhGroupId</ipxact:name>
-          <ipxact:displayName>Group ID</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhParameterId" type="string">
-          <ipxact:name>dfhParameterId</ipxact:name>
-          <ipxact:displayName>ID</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhParameterName" type="string">
-          <ipxact:name>dfhParameterName</ipxact:name>
-          <ipxact:displayName>Name</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhParameterVersion" type="string">
-          <ipxact:name>dfhParameterVersion</ipxact:name>
-          <ipxact:displayName>Version</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhParameterData" type="string">
-          <ipxact:name>dfhParameterData</ipxact:name>
-          <ipxact:displayName>Data (HEX/DEC)</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhParameterDataLength" type="string">
-          <ipxact:name>dfhParameterDataLength</ipxact:name>
-          <ipxact:displayName>Data length</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhFeatureMajorVersion" type="longint">
-          <ipxact:name>dfhFeatureMajorVersion</ipxact:name>
-          <ipxact:displayName>Feature major version</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhFeatureMinorVersion" type="longint">
-          <ipxact:name>dfhFeatureMinorVersion</ipxact:name>
-          <ipxact:displayName>Feature minor version</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhFeatureId" type="longint">
-          <ipxact:name>dfhFeatureId</ipxact:name>
-          <ipxact:displayName>Feature ID</ipxact:displayName>
-          <ipxact:value>35</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="dfhFeatureType" type="longint">
-          <ipxact:name>dfhFeatureType</ipxact:name>
-          <ipxact:displayName>Feature Type</ipxact:displayName>
-          <ipxact:value>3</ipxact:value>
-        </ipxact:parameter>
-      </ipxact:parameters>
-      <ipxact:vendorExtensions>
-        <altera:altera_assignments>
-          <ipxact:parameters>
-            <ipxact:parameter parameterId="embeddedsw.configuration.isFlash" type="string">
-              <ipxact:name>embeddedsw.configuration.isFlash</ipxact:name>
-              <ipxact:value>0</ipxact:value>
-            </ipxact:parameter>
-            <ipxact:parameter parameterId="embeddedsw.configuration.isMemoryDevice" type="string">
-              <ipxact:name>embeddedsw.configuration.isMemoryDevice</ipxact:name>
-              <ipxact:value>0</ipxact:value>
-            </ipxact:parameter>
-            <ipxact:parameter parameterId="embeddedsw.configuration.isNonVolatileStorage" type="string">
-              <ipxact:name>embeddedsw.configuration.isNonVolatileStorage</ipxact:name>
-              <ipxact:value>0</ipxact:value>
-            </ipxact:parameter>
-            <ipxact:parameter parameterId="embeddedsw.configuration.isPrintableDevice" type="string">
-              <ipxact:name>embeddedsw.configuration.isPrintableDevice</ipxact:name>
-              <ipxact:value>0</ipxact:value>
-            </ipxact:parameter>
-          </ipxact:parameters>
-        </altera:altera_assignments>
-      </ipxact:vendorExtensions>
-    </ipxact:busInterface>
-    <ipxact:busInterface>
-      <ipxact:name>cra_irq</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="interrupt" version="24.1"></ipxact:busType>
-      <ipxact:abstractionTypes>
-        <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="interrupt" version="24.1"></ipxact:abstractionRef>
-          <ipxact:portMaps>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>irq</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>cra_irq_o</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-          </ipxact:portMaps>
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-      <ipxact:slave></ipxact:slave>
-      <ipxact:parameters>
-        <ipxact:parameter parameterId="associatedAddressablePoint" type="string">
-          <ipxact:name>associatedAddressablePoint</ipxact:name>
-          <ipxact:displayName>Associated addressable interface</ipxact:displayName>
-          <ipxact:value>pcie_ed_DUT.cra</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="associatedClock" type="string">
-          <ipxact:name>associatedClock</ipxact:name>
-          <ipxact:displayName>Associated clock</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="associatedReset" type="string">
-          <ipxact:name>associatedReset</ipxact:name>
-          <ipxact:displayName>Associated reset</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="bridgedReceiverOffset" type="longint">
-          <ipxact:name>bridgedReceiverOffset</ipxact:name>
-          <ipxact:displayName>Bridged receiver offset</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="bridgesToReceiver" type="string">
-          <ipxact:name>bridgesToReceiver</ipxact:name>
-          <ipxact:displayName>Bridges to receiver</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="irqScheme" type="string">
-          <ipxact:name>irqScheme</ipxact:name>
-          <ipxact:displayName>Interrupt scheme</ipxact:displayName>
-          <ipxact:value>NONE</ipxact:value>
-        </ipxact:parameter>
-      </ipxact:parameters>
-    </ipxact:busInterface>
-    <ipxact:busInterface>
       <ipxact:name>rxm_bar0</ipxact:name>
       <ipxact:busType vendor="intel" library="intel" name="avalon" version="24.1"></ipxact:busType>
       <ipxact:abstractionTypes>
@@ -1629,53 +796,6 @@ https://fpgasoftware.intel.com/eula.-->
         </ipxact:parameter>
       </ipxact:parameters>
     </ipxact:busInterface>
-    <ipxact:busInterface>
-      <ipxact:name>rxm_irq</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="interrupt" version="24.1"></ipxact:busType>
-      <ipxact:abstractionTypes>
-        <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="interrupt" version="24.1"></ipxact:abstractionRef>
-          <ipxact:portMaps>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>irq</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>rxm_irq_i</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-          </ipxact:portMaps>
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-      <ipxact:master></ipxact:master>
-      <ipxact:parameters>
-        <ipxact:parameter parameterId="associatedAddressablePoint" type="string">
-          <ipxact:name>associatedAddressablePoint</ipxact:name>
-          <ipxact:displayName>Associated addressable interface</ipxact:displayName>
-          <ipxact:value>pcie_ed_DUT.rxm_bar0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="associatedClock" type="string">
-          <ipxact:name>associatedClock</ipxact:name>
-          <ipxact:displayName>Associated clock</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="associatedReset" type="string">
-          <ipxact:name>associatedReset</ipxact:name>
-          <ipxact:displayName>Associated reset</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="irqMap" type="string">
-          <ipxact:name>irqMap</ipxact:name>
-          <ipxact:displayName>IRQ Map</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="irqScheme" type="string">
-          <ipxact:name>irqScheme</ipxact:name>
-          <ipxact:displayName>Interrupt scheme</ipxact:displayName>
-          <ipxact:value>INDIVIDUAL_REQUESTS</ipxact:value>
-        </ipxact:parameter>
-      </ipxact:parameters>
-    </ipxact:busInterface>
   </ipxact:busInterfaces>
   <ipxact:model>
     <ipxact:views>
@@ -1692,6 +812,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:fileSetRef>
           <ipxact:localName>QUARTUS_SYNTH</ipxact:localName>
         </ipxact:fileSetRef>
+        <ipxact:parameters></ipxact:parameters>
       </ipxact:componentInstantiation>
     </ipxact:instantiations>
     <ipxact:ports>
@@ -1699,6 +820,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>coreclkout_hip</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1711,6 +833,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>refclk</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1723,6 +846,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>npor</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1735,6 +859,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>pin_perst</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1747,6 +872,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>app_nreset_status</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1777,6 +903,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>simu_mode_pipe</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1786,45 +913,10 @@ https://fpgasoftware.intel.com/eula.-->
         </ipxact:wire>
       </ipxact:port>
       <ipxact:port>
-        <ipxact:name>devkit_status</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors>
-            <ipxact:vector>
-              <ipxact:left>0</ipxact:left>
-              <ipxact:right>255</ipxact:right>
-            </ipxact:vector>
-          </ipxact:vectors>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC_VECTOR</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>devkit_ctrl</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors>
-            <ipxact:vector>
-              <ipxact:left>0</ipxact:left>
-              <ipxact:right>255</ipxact:right>
-            </ipxact:vector>
-          </ipxact:vectors>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC_VECTOR</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
         <ipxact:name>sim_pipe_pclk_in</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1909,6 +1001,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>rxpolarity0</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1921,6 +1014,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>txcompl0</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1969,6 +1063,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>txdetectrx0</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1981,6 +1076,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>txelecidle0</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1993,6 +1089,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>txdeemph0</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2023,6 +1120,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>txswing0</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2035,6 +1133,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>phystatus0</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2083,6 +1182,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>rxelecidle0</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2113,6 +1213,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>rxvalid0</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2125,6 +1226,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>rxdataskip0</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2137,6 +1239,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>rxblkst0</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2221,6 +1324,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>txblkst0</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2233,6 +1337,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>txdataskip0</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2263,6 +1368,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>rx_in0</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2275,288 +1381,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>tx_out0</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>txs_address_i</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors>
-            <ipxact:vector>
-              <ipxact:left>0</ipxact:left>
-              <ipxact:right>12</ipxact:right>
-            </ipxact:vector>
-          </ipxact:vectors>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC_VECTOR</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>txs_chipselect_i</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>in</ipxact:direction>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>txs_byteenable_i</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors>
-            <ipxact:vector>
-              <ipxact:left>0</ipxact:left>
-              <ipxact:right>7</ipxact:right>
-            </ipxact:vector>
-          </ipxact:vectors>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC_VECTOR</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>txs_readdata_o</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors>
-            <ipxact:vector>
-              <ipxact:left>0</ipxact:left>
-              <ipxact:right>63</ipxact:right>
-            </ipxact:vector>
-          </ipxact:vectors>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC_VECTOR</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>txs_writedata_i</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors>
-            <ipxact:vector>
-              <ipxact:left>0</ipxact:left>
-              <ipxact:right>63</ipxact:right>
-            </ipxact:vector>
-          </ipxact:vectors>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC_VECTOR</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>txs_read_i</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>in</ipxact:direction>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>txs_write_i</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>in</ipxact:direction>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>txs_burstcount_i</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors>
-            <ipxact:vector>
-              <ipxact:left>0</ipxact:left>
-              <ipxact:right>6</ipxact:right>
-            </ipxact:vector>
-          </ipxact:vectors>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC_VECTOR</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>txs_readdatavalid_o</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>out</ipxact:direction>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>txs_waitrequest_o</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>out</ipxact:direction>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>cra_chipselect_i</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>in</ipxact:direction>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>cra_address_i</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors>
-            <ipxact:vector>
-              <ipxact:left>0</ipxact:left>
-              <ipxact:right>13</ipxact:right>
-            </ipxact:vector>
-          </ipxact:vectors>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC_VECTOR</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>cra_byteenable_i</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors>
-            <ipxact:vector>
-              <ipxact:left>0</ipxact:left>
-              <ipxact:right>3</ipxact:right>
-            </ipxact:vector>
-          </ipxact:vectors>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC_VECTOR</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>cra_read_i</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>in</ipxact:direction>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>cra_readdata_o</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors>
-            <ipxact:vector>
-              <ipxact:left>0</ipxact:left>
-              <ipxact:right>31</ipxact:right>
-            </ipxact:vector>
-          </ipxact:vectors>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC_VECTOR</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>cra_write_i</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>in</ipxact:direction>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>cra_writedata_i</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors>
-            <ipxact:vector>
-              <ipxact:left>0</ipxact:left>
-              <ipxact:right>31</ipxact:right>
-            </ipxact:vector>
-          </ipxact:vectors>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC_VECTOR</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>cra_waitrequest_o</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>out</ipxact:direction>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>cra_irq_o</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2641,6 +1466,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>rxm_bar0_read_o</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2653,6 +1479,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>rxm_bar0_write_o</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2683,6 +1510,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>rxm_bar0_readdatavalid_i</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2695,27 +1523,10 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>rxm_bar0_waitrequest_i</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>rxm_irq_i</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors>
-            <ipxact:vector>
-              <ipxact:left>0</ipxact:left>
-              <ipxact:right>15</ipxact:right>
-            </ipxact:vector>
-          </ipxact:vectors>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC_VECTOR</ipxact:typeName>
               <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
             </ipxact:wireTypeDef>
           </ipxact:wireTypeDefs>
@@ -2770,7 +1581,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="cb_pcie_mode_hwtcl" type="int">
           <ipxact:name>cb_pcie_mode_hwtcl</ipxact:name>
           <ipxact:displayName>Enable completer-only Endpoint</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
+          <ipxact:value>1</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="cb_pcie_rx_lite_hwtcl" type="int">
           <ipxact:name>cb_pcie_rx_lite_hwtcl</ipxact:name>
@@ -2780,7 +1591,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="cg_impl_cra_av_slave_port_hwtcl" type="int">
           <ipxact:name>cg_impl_cra_av_slave_port_hwtcl</ipxact:name>
           <ipxact:displayName>Enable control register access (CRA) Avalon-MM slave port</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
+          <ipxact:value>0</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="cg_enable_advanced_interrupt_hwtcl" type="int">
           <ipxact:name>cg_enable_advanced_interrupt_hwtcl</ipxact:name>
@@ -2930,7 +1741,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="enable_devkit_conduit_hwtcl" type="int">
           <ipxact:name>enable_devkit_conduit_hwtcl</ipxact:name>
           <ipxact:displayName>Enable FPGA Development Kit connection</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
+          <ipxact:value>0</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="enable_skp_det" type="int">
           <ipxact:name>enable_skp_det</ipxact:name>
@@ -6900,7 +5711,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="slave_address_map_0_hwtcl" type="int">
           <ipxact:name>slave_address_map_0_hwtcl</ipxact:name>
           <ipxact:displayName>slave_address_map_0_hwtcl</ipxact:displayName>
-          <ipxact:value>15</ipxact:value>
+          <ipxact:value>4</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="slave_address_map_1_hwtcl" type="int">
           <ipxact:name>slave_address_map_1_hwtcl</ipxact:name>
@@ -7030,7 +5841,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="AUTO_RXM_IRQ_INTERRUPTS_USED" type="string">
           <ipxact:name>AUTO_RXM_IRQ_INTERRUPTS_USED</ipxact:name>
           <ipxact:displayName>Auto INTERRUPTS_USED</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
+          <ipxact:value>-1</ipxact:value>
         </ipxact:parameter>
       </ipxact:parameters>
     </altera:altera_module_parameters>
@@ -7146,6 +5957,17 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:displayName>bonusData</ipxact:displayName>
           <ipxact:value>bonusData 
 {
+   element $system
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone 10 GX";
+         type = "String";
+      }
+   }
+   element DUT
+   {
+   }
 }
 </ipxact:value>
         </ipxact:parameter>
@@ -7335,48 +6157,6 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;width&gt;1&lt;/width&gt;
                     &lt;lowerBound&gt;0&lt;/lowerBound&gt;
                     &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-            &lt;/ports&gt;
-            &lt;assignments&gt;
-                &lt;assignmentValueMap/&gt;
-            &lt;/assignments&gt;
-            &lt;parameters&gt;
-                &lt;parameterValueMap&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedClock&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedReset&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;prSafe&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                &lt;/parameterValueMap&gt;
-            &lt;/parameters&gt;
-        &lt;/interface&gt;
-        &lt;interface&gt;
-            &lt;name&gt;dk_hip&lt;/name&gt;
-            &lt;type&gt;conduit&lt;/type&gt;
-            &lt;isStart&gt;false&lt;/isStart&gt;
-            &lt;ports&gt;
-                &lt;port&gt;
-                    &lt;name&gt;devkit_status&lt;/name&gt;
-                    &lt;role&gt;devkit_status&lt;/role&gt;
-                    &lt;direction&gt;Output&lt;/direction&gt;
-                    &lt;width&gt;256&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-                &lt;port&gt;
-                    &lt;name&gt;devkit_ctrl&lt;/name&gt;
-                    &lt;role&gt;devkit_ctrl&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;256&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
                     &lt;terminationValue&gt;0&lt;/terminationValue&gt;
                 &lt;/port&gt;
             &lt;/ports&gt;
@@ -7726,679 +6506,6 @@ https://fpgasoftware.intel.com/eula.-->
             &lt;/parameters&gt;
         &lt;/interface&gt;
         &lt;interface&gt;
-            &lt;name&gt;txs&lt;/name&gt;
-            &lt;type&gt;avalon&lt;/type&gt;
-            &lt;isStart&gt;false&lt;/isStart&gt;
-            &lt;ports&gt;
-                &lt;port&gt;
-                    &lt;name&gt;txs_address_i&lt;/name&gt;
-                    &lt;role&gt;address&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;13&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-                &lt;port&gt;
-                    &lt;name&gt;txs_chipselect_i&lt;/name&gt;
-                    &lt;role&gt;chipselect&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;1&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-                &lt;port&gt;
-                    &lt;name&gt;txs_byteenable_i&lt;/name&gt;
-                    &lt;role&gt;byteenable&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;8&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-                &lt;port&gt;
-                    &lt;name&gt;txs_readdata_o&lt;/name&gt;
-                    &lt;role&gt;readdata&lt;/role&gt;
-                    &lt;direction&gt;Output&lt;/direction&gt;
-                    &lt;width&gt;64&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-                &lt;port&gt;
-                    &lt;name&gt;txs_writedata_i&lt;/name&gt;
-                    &lt;role&gt;writedata&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;64&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-                &lt;port&gt;
-                    &lt;name&gt;txs_read_i&lt;/name&gt;
-                    &lt;role&gt;read&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;1&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-                &lt;port&gt;
-                    &lt;name&gt;txs_write_i&lt;/name&gt;
-                    &lt;role&gt;write&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;1&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-                &lt;port&gt;
-                    &lt;name&gt;txs_burstcount_i&lt;/name&gt;
-                    &lt;role&gt;burstcount&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;7&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-                &lt;port&gt;
-                    &lt;name&gt;txs_readdatavalid_o&lt;/name&gt;
-                    &lt;role&gt;readdatavalid&lt;/role&gt;
-                    &lt;direction&gt;Output&lt;/direction&gt;
-                    &lt;width&gt;1&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-                &lt;port&gt;
-                    &lt;name&gt;txs_waitrequest_o&lt;/name&gt;
-                    &lt;role&gt;waitrequest&lt;/role&gt;
-                    &lt;direction&gt;Output&lt;/direction&gt;
-                    &lt;width&gt;1&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-            &lt;/ports&gt;
-            &lt;assignments&gt;
-                &lt;assignmentValueMap&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;embeddedsw.configuration.isFlash&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;embeddedsw.configuration.isMemoryDevice&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;embeddedsw.configuration.isNonVolatileStorage&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;embeddedsw.configuration.isPrintableDevice&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                &lt;/assignmentValueMap&gt;
-            &lt;/assignments&gt;
-            &lt;parameters&gt;
-                &lt;parameterValueMap&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;addressAlignment&lt;/key&gt;
-                        &lt;value&gt;DYNAMIC&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;addressGroup&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;addressSpan&lt;/key&gt;
-                        &lt;value&gt;8192&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;addressUnits&lt;/key&gt;
-                        &lt;value&gt;SYMBOLS&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;alwaysBurstMaxBurst&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedClock&lt;/key&gt;
-                        &lt;value&gt;coreclkout_hip&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedReset&lt;/key&gt;
-                        &lt;value&gt;app_nreset_status&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;bitsPerSymbol&lt;/key&gt;
-                        &lt;value&gt;8&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;bridgedAddressOffset&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;bridgesToMaster&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;burstOnBurstBoundariesOnly&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;burstcountUnits&lt;/key&gt;
-                        &lt;value&gt;WORDS&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;constantBurstBehavior&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;explicitAddressSpan&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;holdTime&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;interleaveBursts&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;isBigEndian&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;isFlash&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;isMemoryDevice&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;isNonVolatileStorage&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;linewrapBursts&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;maximumPendingReadTransactions&lt;/key&gt;
-                        &lt;value&gt;16&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;maximumPendingWriteTransactions&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;minimumReadLatency&lt;/key&gt;
-                        &lt;value&gt;1&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;minimumResponseLatency&lt;/key&gt;
-                        &lt;value&gt;1&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;minimumUninterruptedRunLength&lt;/key&gt;
-                        &lt;value&gt;1&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;prSafe&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;printableDevice&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;readLatency&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;readWaitStates&lt;/key&gt;
-                        &lt;value&gt;1&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;readWaitTime&lt;/key&gt;
-                        &lt;value&gt;1&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;registerIncomingSignals&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;registerOutgoingSignals&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;setupTime&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;timingUnits&lt;/key&gt;
-                        &lt;value&gt;Cycles&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;transparentBridge&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;waitrequestAllowance&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;wellBehavedWaitrequest&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;writeLatency&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;writeWaitStates&lt;/key&gt;
-                        &lt;value&gt;1&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;writeWaitTime&lt;/key&gt;
-                        &lt;value&gt;1&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhFeatureGuid&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhGroupId&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhParameterId&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhParameterName&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhParameterVersion&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhParameterData&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhParameterDataLength&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhFeatureMajorVersion&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhFeatureMinorVersion&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhFeatureId&lt;/key&gt;
-                        &lt;value&gt;35&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhFeatureType&lt;/key&gt;
-                        &lt;value&gt;3&lt;/value&gt;
-                    &lt;/entry&gt;
-                &lt;/parameterValueMap&gt;
-            &lt;/parameters&gt;
-        &lt;/interface&gt;
-        &lt;interface&gt;
-            &lt;name&gt;cra&lt;/name&gt;
-            &lt;type&gt;avalon&lt;/type&gt;
-            &lt;isStart&gt;false&lt;/isStart&gt;
-            &lt;ports&gt;
-                &lt;port&gt;
-                    &lt;name&gt;cra_chipselect_i&lt;/name&gt;
-                    &lt;role&gt;chipselect&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;1&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-                &lt;port&gt;
-                    &lt;name&gt;cra_address_i&lt;/name&gt;
-                    &lt;role&gt;address&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;14&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-                &lt;port&gt;
-                    &lt;name&gt;cra_byteenable_i&lt;/name&gt;
-                    &lt;role&gt;byteenable&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;4&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-                &lt;port&gt;
-                    &lt;name&gt;cra_read_i&lt;/name&gt;
-                    &lt;role&gt;read&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;1&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-                &lt;port&gt;
-                    &lt;name&gt;cra_readdata_o&lt;/name&gt;
-                    &lt;role&gt;readdata&lt;/role&gt;
-                    &lt;direction&gt;Output&lt;/direction&gt;
-                    &lt;width&gt;32&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-                &lt;port&gt;
-                    &lt;name&gt;cra_write_i&lt;/name&gt;
-                    &lt;role&gt;write&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;1&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-                &lt;port&gt;
-                    &lt;name&gt;cra_writedata_i&lt;/name&gt;
-                    &lt;role&gt;writedata&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;32&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-                &lt;port&gt;
-                    &lt;name&gt;cra_waitrequest_o&lt;/name&gt;
-                    &lt;role&gt;waitrequest&lt;/role&gt;
-                    &lt;direction&gt;Output&lt;/direction&gt;
-                    &lt;width&gt;1&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-            &lt;/ports&gt;
-            &lt;assignments&gt;
-                &lt;assignmentValueMap&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;embeddedsw.configuration.isFlash&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;embeddedsw.configuration.isMemoryDevice&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;embeddedsw.configuration.isNonVolatileStorage&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;embeddedsw.configuration.isPrintableDevice&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                &lt;/assignmentValueMap&gt;
-            &lt;/assignments&gt;
-            &lt;parameters&gt;
-                &lt;parameterValueMap&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;addressAlignment&lt;/key&gt;
-                        &lt;value&gt;DYNAMIC&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;addressGroup&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;addressSpan&lt;/key&gt;
-                        &lt;value&gt;16384&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;addressUnits&lt;/key&gt;
-                        &lt;value&gt;SYMBOLS&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;alwaysBurstMaxBurst&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedClock&lt;/key&gt;
-                        &lt;value&gt;coreclkout_hip&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedReset&lt;/key&gt;
-                        &lt;value&gt;app_nreset_status&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;bitsPerSymbol&lt;/key&gt;
-                        &lt;value&gt;8&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;bridgedAddressOffset&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;bridgesToMaster&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;burstOnBurstBoundariesOnly&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;burstcountUnits&lt;/key&gt;
-                        &lt;value&gt;WORDS&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;constantBurstBehavior&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;explicitAddressSpan&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;holdTime&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;interleaveBursts&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;isBigEndian&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;isFlash&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;isMemoryDevice&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;isNonVolatileStorage&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;linewrapBursts&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;maximumPendingReadTransactions&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;maximumPendingWriteTransactions&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;minimumReadLatency&lt;/key&gt;
-                        &lt;value&gt;1&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;minimumResponseLatency&lt;/key&gt;
-                        &lt;value&gt;1&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;minimumUninterruptedRunLength&lt;/key&gt;
-                        &lt;value&gt;1&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;prSafe&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;printableDevice&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;readLatency&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;readWaitStates&lt;/key&gt;
-                        &lt;value&gt;1&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;readWaitTime&lt;/key&gt;
-                        &lt;value&gt;1&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;registerIncomingSignals&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;registerOutgoingSignals&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;setupTime&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;timingUnits&lt;/key&gt;
-                        &lt;value&gt;Cycles&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;transparentBridge&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;waitrequestAllowance&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;wellBehavedWaitrequest&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;writeLatency&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;writeWaitStates&lt;/key&gt;
-                        &lt;value&gt;1&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;writeWaitTime&lt;/key&gt;
-                        &lt;value&gt;1&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhFeatureGuid&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhGroupId&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhParameterId&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhParameterName&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhParameterVersion&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhParameterData&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhParameterDataLength&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhFeatureMajorVersion&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhFeatureMinorVersion&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhFeatureId&lt;/key&gt;
-                        &lt;value&gt;35&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;dfhFeatureType&lt;/key&gt;
-                        &lt;value&gt;3&lt;/value&gt;
-                    &lt;/entry&gt;
-                &lt;/parameterValueMap&gt;
-            &lt;/parameters&gt;
-        &lt;/interface&gt;
-        &lt;interface&gt;
-            &lt;name&gt;cra_irq&lt;/name&gt;
-            &lt;type&gt;interrupt&lt;/type&gt;
-            &lt;isStart&gt;false&lt;/isStart&gt;
-            &lt;ports&gt;
-                &lt;port&gt;
-                    &lt;name&gt;cra_irq_o&lt;/name&gt;
-                    &lt;role&gt;irq&lt;/role&gt;
-                    &lt;direction&gt;Output&lt;/direction&gt;
-                    &lt;width&gt;1&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-            &lt;/ports&gt;
-            &lt;assignments&gt;
-                &lt;assignmentValueMap/&gt;
-            &lt;/assignments&gt;
-            &lt;parameters&gt;
-                &lt;parameterValueMap&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedAddressablePoint&lt;/key&gt;
-                        &lt;value&gt;pcie_ed_DUT.cra&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedClock&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedReset&lt;/key&gt;
-                        &lt;value&gt;&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;bridgedReceiverOffset&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;bridgesToReceiver&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;irqScheme&lt;/key&gt;
-                        &lt;value&gt;NONE&lt;/value&gt;
-                    &lt;/entry&gt;
-                &lt;/parameterValueMap&gt;
-            &lt;/parameters&gt;
-        &lt;/interface&gt;
-        &lt;interface&gt;
             &lt;name&gt;rxm_bar0&lt;/name&gt;
             &lt;type&gt;avalon&lt;/type&gt;
             &lt;isStart&gt;true&lt;/isStart&gt;
@@ -8628,47 +6735,6 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;/parameterValueMap&gt;
             &lt;/parameters&gt;
         &lt;/interface&gt;
-        &lt;interface&gt;
-            &lt;name&gt;rxm_irq&lt;/name&gt;
-            &lt;type&gt;interrupt&lt;/type&gt;
-            &lt;isStart&gt;true&lt;/isStart&gt;
-            &lt;ports&gt;
-                &lt;port&gt;
-                    &lt;name&gt;rxm_irq_i&lt;/name&gt;
-                    &lt;role&gt;irq&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;16&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-            &lt;/ports&gt;
-            &lt;assignments&gt;
-                &lt;assignmentValueMap/&gt;
-            &lt;/assignments&gt;
-            &lt;parameters&gt;
-                &lt;parameterValueMap&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedAddressablePoint&lt;/key&gt;
-                        &lt;value&gt;pcie_ed_DUT.rxm_bar0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedClock&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedReset&lt;/key&gt;
-                        &lt;value&gt;&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;irqMap&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;irqScheme&lt;/key&gt;
-                        &lt;value&gt;INDIVIDUAL_REQUESTS&lt;/value&gt;
-                    &lt;/entry&gt;
-                &lt;/parameterValueMap&gt;
-            &lt;/parameters&gt;
-        &lt;/interface&gt;
     &lt;/interfaces&gt;
 &lt;/boundaryDefinition&gt;</ipxact:value>
         </ipxact:parameter>
@@ -8718,7 +6784,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;ADDRESS_WIDTH&lt;/key&gt;
-                        &lt;value&gt;15&lt;/value&gt;
+                        &lt;value&gt;4&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos/&gt;
@@ -8780,23 +6846,9 @@ https://fpgasoftware.intel.com/eula.-->
       <altera:interface_mapping altera:name="coreclkout_hip" altera:internal="DUT.coreclkout_hip" altera:type="clock" altera:dir="start">
         <altera:port_mapping altera:name="coreclkout_hip" altera:internal="coreclkout_hip"></altera:port_mapping>
       </altera:interface_mapping>
-      <altera:interface_mapping altera:name="cra" altera:internal="DUT.cra" altera:type="avalon" altera:dir="end">
-        <altera:port_mapping altera:name="cra_address_i" altera:internal="cra_address_i"></altera:port_mapping>
-        <altera:port_mapping altera:name="cra_byteenable_i" altera:internal="cra_byteenable_i"></altera:port_mapping>
-        <altera:port_mapping altera:name="cra_chipselect_i" altera:internal="cra_chipselect_i"></altera:port_mapping>
-        <altera:port_mapping altera:name="cra_read_i" altera:internal="cra_read_i"></altera:port_mapping>
-        <altera:port_mapping altera:name="cra_readdata_o" altera:internal="cra_readdata_o"></altera:port_mapping>
-        <altera:port_mapping altera:name="cra_waitrequest_o" altera:internal="cra_waitrequest_o"></altera:port_mapping>
-        <altera:port_mapping altera:name="cra_write_i" altera:internal="cra_write_i"></altera:port_mapping>
-        <altera:port_mapping altera:name="cra_writedata_i" altera:internal="cra_writedata_i"></altera:port_mapping>
-      </altera:interface_mapping>
-      <altera:interface_mapping altera:name="cra_irq" altera:internal="DUT.cra_irq" altera:type="interrupt" altera:dir="end">
-        <altera:port_mapping altera:name="cra_irq_o" altera:internal="cra_irq_o"></altera:port_mapping>
-      </altera:interface_mapping>
-      <altera:interface_mapping altera:name="dk_hip" altera:internal="DUT.dk_hip" altera:type="conduit" altera:dir="end">
-        <altera:port_mapping altera:name="devkit_ctrl" altera:internal="devkit_ctrl"></altera:port_mapping>
-        <altera:port_mapping altera:name="devkit_status" altera:internal="devkit_status"></altera:port_mapping>
-      </altera:interface_mapping>
+      <altera:interface_mapping altera:name="cra" altera:internal="DUT.cra"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="cra_irq" altera:internal="DUT.cra_irq"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="dk_hip" altera:internal="DUT.dk_hip"></altera:interface_mapping>
       <altera:interface_mapping altera:name="hip_ctrl" altera:internal="DUT.hip_ctrl" altera:type="conduit" altera:dir="end">
         <altera:port_mapping altera:name="simu_mode_pipe" altera:internal="simu_mode_pipe"></altera:port_mapping>
         <altera:port_mapping altera:name="test_in" altera:internal="test_in"></altera:port_mapping>
@@ -8854,23 +6906,10 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:port_mapping altera:name="rxm_bar0_write_o" altera:internal="rxm_bar0_write_o"></altera:port_mapping>
         <altera:port_mapping altera:name="rxm_bar0_writedata_o" altera:internal="rxm_bar0_writedata_o"></altera:port_mapping>
       </altera:interface_mapping>
-      <altera:interface_mapping altera:name="rxm_irq" altera:internal="DUT.rxm_irq" altera:type="interrupt" altera:dir="start">
-        <altera:port_mapping altera:name="rxm_irq_i" altera:internal="rxm_irq_i"></altera:port_mapping>
-      </altera:interface_mapping>
-      <altera:interface_mapping altera:name="txs" altera:internal="DUT.txs" altera:type="avalon" altera:dir="end">
-        <altera:port_mapping altera:name="txs_address_i" altera:internal="txs_address_i"></altera:port_mapping>
-        <altera:port_mapping altera:name="txs_burstcount_i" altera:internal="txs_burstcount_i"></altera:port_mapping>
-        <altera:port_mapping altera:name="txs_byteenable_i" altera:internal="txs_byteenable_i"></altera:port_mapping>
-        <altera:port_mapping altera:name="txs_chipselect_i" altera:internal="txs_chipselect_i"></altera:port_mapping>
-        <altera:port_mapping altera:name="txs_read_i" altera:internal="txs_read_i"></altera:port_mapping>
-        <altera:port_mapping altera:name="txs_readdata_o" altera:internal="txs_readdata_o"></altera:port_mapping>
-        <altera:port_mapping altera:name="txs_readdatavalid_o" altera:internal="txs_readdatavalid_o"></altera:port_mapping>
-        <altera:port_mapping altera:name="txs_waitrequest_o" altera:internal="txs_waitrequest_o"></altera:port_mapping>
-        <altera:port_mapping altera:name="txs_write_i" altera:internal="txs_write_i"></altera:port_mapping>
-        <altera:port_mapping altera:name="txs_writedata_i" altera:internal="txs_writedata_i"></altera:port_mapping>
-      </altera:interface_mapping>
+      <altera:interface_mapping altera:name="rxm_irq" altera:internal="DUT.rxm_irq"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="txs" altera:internal="DUT.txs"></altera:interface_mapping>
     </altera:altera_interface_boundary>
-    <altera:altera_has_warnings>false</altera:altera_has_warnings>
+    <altera:altera_has_warnings>true</altera:altera_has_warnings>
     <altera:altera_has_errors>false</altera:altera_has_errors>
   </ipxact:vendorExtensions>
 </ipxact:component>
