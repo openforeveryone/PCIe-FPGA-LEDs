@@ -46,6 +46,14 @@ static int fpgaboard_led_brightness_set(struct led_classdev *cdev, enum led_brig
         return 0;
 }
 
+static enum led_brightness fpgaboard_led_brightness_get(struct led_classdev *cdev) {
+        u8 reg_value;
+        struct user_led *led = container_of(cdev, struct user_led, led_dev);
+
+        reg_value = ioread8(led->device_reg);
+        return (reg_value >> led->bit) & 1;
+}
+
 static int fpgaboard_probe(struct pci_dev *dev, const struct pci_device_id *id) {
         int status, i;
         void __iomem *const* bar_map;
@@ -92,6 +100,7 @@ static int fpgaboard_probe(struct pci_dev *dev, const struct pci_device_id *id) 
                 board->user_leds[i].led_dev.name = led_name;
                 board->user_leds[i].led_dev.max_brightness = 1;
                 board->user_leds[i].led_dev.brightness_set_blocking = fpgaboard_led_brightness_set;
+                board->user_leds[i].led_dev.brightness_get = fpgaboard_led_brightness_get;
                 
                 status = devm_led_classdev_register(&dev->dev, &board->user_leds[i].led_dev);
                 if (status < 0) {
